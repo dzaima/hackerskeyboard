@@ -50,7 +50,6 @@ public class LatinIMESettings extends PreferenceActivity
     private static final int VOICE_INPUT_CONFIRM_DIALOG = 0;
 
     private CheckBoxPreference mQuickFixes;
-    private ListPreference mVoicePreference;
     private ListPreference mSettingsKeyPreference;
     private ListPreference mKeyboardModePortraitPreference;
     private ListPreference mKeyboardModeLandscapePreference;
@@ -65,7 +64,6 @@ public class LatinIMESettings extends PreferenceActivity
         super.onCreate(icicle);
         addPreferencesFromResource(R.xml.prefs);
         mQuickFixes = (CheckBoxPreference) findPreference(QUICK_FIXES_KEY);
-        mVoicePreference = (ListPreference) findPreference(VOICE_SETTINGS_KEY);
         mSettingsKeyPreference = (ListPreference) findPreference(PREF_SETTINGS_KEY);
         mInputConnectionInfo = (Preference) findPreference(INPUT_CONNECTION_INFO);
 
@@ -77,7 +75,7 @@ public class LatinIMESettings extends PreferenceActivity
         prefs.registerOnSharedPreferenceChangeListener(this);
 
         mVoiceModeOff = getString(R.string.voice_mode_off);
-        mVoiceOn = !(prefs.getString(VOICE_SETTINGS_KEY, mVoiceModeOff).equals(mVoiceModeOff));
+        mVoiceOn = false;
     }
 
     @Override
@@ -124,7 +122,6 @@ public class LatinIMESettings extends PreferenceActivity
             }
         }
         mVoiceOn = !(prefs.getString(VOICE_SETTINGS_KEY, mVoiceModeOff).equals(mVoiceModeOff));
-        updateVoiceModeSummary();
         updateSummaries();
     }
 
@@ -226,12 +223,6 @@ public class LatinIMESettings extends PreferenceActivity
         showDialog(VOICE_INPUT_CONFIRM_DIALOG);
     }
 
-    private void updateVoiceModeSummary() {
-        mVoicePreference.setSummary(
-                getResources().getStringArray(R.array.voice_input_modes_summary)
-                [mVoicePreference.findIndexOfValue(mVoicePreference.getValue())]);
-    }
-
     @Override
     protected Dialog onCreateDialog(int id) {
         switch (id) {
@@ -241,14 +232,8 @@ public class LatinIMESettings extends PreferenceActivity
         }
     }
 
-    public void onDismiss(DialogInterface dialog) {
-        if (!mOkClicked) {
-            // This assumes that onPreferenceClick gets called first, and this if the user
-            // agreed after the warning, we set the mOkClicked value to true.
-            mVoicePreference.setValue(mVoiceModeOff);
-        }
-    }
 
-    private void updateVoicePreference() {
+    @Override public void onDismiss(DialogInterface dialog) {
+
     }
 }

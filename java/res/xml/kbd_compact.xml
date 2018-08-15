@@ -29,13 +29,13 @@
  >
     <Row android:extension="true">
         <Key android:codes="@integer/key_escape" android:keyLabel="Esc" android:isModifier="true" />
-        <Key android:keyLabel="`" android:shiftLabel="~" />
-        <Key android:keyLabel="-" android:shiftLabel="_" />
-        <Key android:keyLabel="\\" android:shiftLabel="|" />
-        <Key android:keyLabel=";" android:shiftLabel=":" />
-        <Key android:keyLabel="=" android:shiftLabel="+" />        
-        <Key android:keyLabel="[" android:shiftLabel="{" />
-        <Key android:keyLabel="]" android:shiftLabel="}" />
+        <Key android:keyLabel="`" android:shiftLabel="~" android:popupCharacters="⋄⌺" />
+        <Key android:keyLabel="-" android:shiftLabel="_" android:popupCharacters="×!" />
+        <Key android:keyLabel="\\" android:shiftLabel="|" android:popupCharacters="⊢⊣" />
+        <Key android:keyLabel=";" android:shiftLabel=":" android:popupCharacters="⍎≡" />
+        <Key android:keyLabel="=" android:shiftLabel="+" android:popupCharacters="÷⌹" />
+        <Key android:keyLabel="[" android:shiftLabel="{" android:popupCharacters="←⍞" />
+        <Key android:keyLabel="]" android:shiftLabel="}" android:popupCharacters="→⍬" />
 	<Key android:codes="@integer/key_home" android:isModifier="true" android:keyLabel="Home" />
 	<Key android:codes="@integer/key_end" android:isModifier="true" android:keyLabel="End" />
 	<Key android:codes="@integer/key_forward_del" android:isModifier="true" android:keyLabel="Del" />
@@ -47,62 +47,62 @@
             android:shiftLabel="!"
             android:keyEdgeFlags="left"
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="`"
+            android:popupCharacters="¨⌶`"
             android:keyWidth="7.09090909%p"
             />
         <Key
             android:keyLabel="2"
             android:shiftLabel="\@"
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="~"
+            android:popupCharacters="¯⍫~"
             />
         <Key
             android:keyLabel="3"
             android:shiftLabel="#"
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="-"
+            android:popupCharacters="&lt;⍒-"
             />
         <Key
             android:keyLabel="4"
             android:shiftLabel="$"
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="_"
+            android:popupCharacters="≤⍋_"
             />
         <Key
             android:keyLabel="5"
             android:shiftLabel="%"
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="="
+            android:popupCharacters="=⌽"
             />
         <Key
             android:keyLabel="6"
             android:shiftLabel="^"
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="+"
+            android:popupCharacters="≥⍉+"
             />
         <Key
             android:keyLabel="7"
             android:shiftLabel="&amp;"
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="{"
+            android:popupCharacters=">⊖{"
             />
         <Key
             android:keyLabel="8"
             android:shiftLabel="*"
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="}"
+            android:popupCharacters="≠⍟}"
             />
         <Key
             android:keyLabel="9"
             android:shiftLabel="("
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="["
+            android:popupCharacters="∨⍱["
             />
         <Key
             android:keyLabel="0"
             android:shiftLabel=")"
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="]"
+            android:popupCharacters="∧⍲]"
             /> 
         <Key
             android:codes="@integer/key_delete"
@@ -159,7 +159,7 @@
             android:keyLabel="'"
             android:shiftLabel="&quot;"
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="|"
+            android:popupCharacters="⍕≢|"
             android:keyEdgeFlags="right" />
     </Row>
     <Row>
@@ -249,20 +249,20 @@
         <Key
             android:keyLabel=","
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters=";"
+            android:popupCharacters="⍝⍪;"
             android:shiftLabel="&lt;" />
         <Key
             android:keyLabel="."
             android:shiftLabel="&gt;"
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters=":"
+            android:popupCharacters="⍀⍙:"
             android:keyIcon="@drawable/hint_popup" />
         <Key
             android:codes="@integer/key_f1"
             android:keyLabel="/"
             android:shiftLabel="\?"
             android:popupKeyboard="@xml/kbd_popup_template"
-            android:popupCharacters="\\"
+            android:popupCharacters="⌿⍠\\"
             android:keyWidth="7.09090909%p"
             android:keyEdgeFlags="right" />
     </Row>
