@@ -27,7 +27,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
   <string name="key_tlde_main">`</string>
   <string name="key_tlde_shift">~</string>
-  <string name="key_tlde_alt">⋄¤</string>
+  <string name="key_tlde_alt">⋄⌺</string>
   
   <string name="key_ae01_main">1</string>
   <string name="key_ae01_shift">!</string>

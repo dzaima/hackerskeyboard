@@ -16,15 +16,19 @@
 ** See the License for the specific language governing permissions and
 ** limitations under the License.
 */
+
+
+other chars: ⊗⊙⌾⍇⍁⍂⌻⌼⍃⍄⍅⍆⍈⍊⍌⍍⍏⍐⍑⍓⍔⍖⍗⍯⍘⍚⍛⍜⍠⍡∞‽√ϼ∍⋾
+
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="alternates_for_a">⍺⍶</string>
     <string name="alternates_for_b">⊥⍭</string>
     <string name="alternates_for_c">∩</string>
     <string name="alternates_for_d">⌊</string>
-    <string name="alternates_for_e">∊</string>
+    <string name="alternates_for_e">∊⍷</string>
     <string name="alternates_for_f">_</string>
-    <string name="alternates_for_g">∇⍢</string>
+    <string name="alternates_for_g">∇⍢⍫</string>
     <string name="alternates_for_h">∆</string>
     <string name="alternates_for_i">⍳⍸</string>
     <string name="alternates_for_j">∘⍤</string>
@@ -41,7 +45,7 @@
     <string name="alternates_for_u">↓</string>
     <string name="alternates_for_v">∪</string>
     <string name="alternates_for_w">⍵⍹</string>
-    <string name="alternates_for_x">⊃</string>
+    <string name="alternates_for_x">⊃⊇</string>
     <string name="alternates_for_y">↑</string>
-    <string name="alternates_for_z">⊂</string>
+    <string name="alternates_for_z">⊂⊆</string>
 </resources>
