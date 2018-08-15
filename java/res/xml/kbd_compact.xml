@@ -258,7 +258,6 @@
             android:popupCharacters="⍀⍙:"
             android:keyIcon="@drawable/hint_popup" />
         <Key
-            android:codes="@integer/key_f1"
             android:keyLabel="/"
             android:shiftLabel="\?"
             android:popupKeyboard="@xml/kbd_popup_template"
