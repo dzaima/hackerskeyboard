@@ -1,3 +1,10 @@
+A fork of [Hacker's Keyboard](https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard) that adds an APL input method (add as the "language" named "English (APL)").
+
+For the time being, [here](https://github.com/dzaima/hackerskeyboard/blob/master/java/java.apk) is an installable APK of the app.
+
+
+Original README:
+
 ## Overview ##
 
 Are you missing the key layout you're used to from your computer when using an Android device? This software keyboard has separate number keys, punctuation in the usual places, and arrow keys. It is based on the AOSP Gingerbread soft keyboard, so it supports multitouch for the modifier keys.
@@ -21,15 +28,3 @@ To install, get **[Hacker's
 Keyboard](https://play.google.com/store/apps/details?id=org.pocketworkstation.pckeyboard)**
 from the Play Store, plus optional [dictionary
 packs](https://play.google.com/store/apps/developer?id=Klaus+Weidner).
-
-## Additional resources ##
-
-See the **ReleaseNotes** for changes in the Play Store released versions, and follow the project on **[Google+](https://plus.google.com/100683221734778417816)** for news and updates including pre-release versions.
-
-Having problems? See the **UsersGuide** and **FrequentlyAskedQuestions**, and check the [issue tracker](http://code.google.com/p/hackerskeyboard/issues/list) for known bugs or filing new ones.
-
-Comments, requests, or contributions? Join the [discussion group](http://groups.google.com/group/hackerskeyboard/).
-
-Application developers: see KeyboardSupportInApplications if you want to enable the additional keys in your Android application, the same method also works for hardware USB or Bluetooth keyboards.
-
-![hk-5row-en-s.png](hk-5row-en-s.png)
