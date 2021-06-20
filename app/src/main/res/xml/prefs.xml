@@ -93,15 +93,6 @@
             android:defaultValue="@string/settings_key_mode_auto"
             />
 
-    <ListPreference
-            android:key="voice_mode"
-            android:title="@string/voice_input"
-            android:persistent="true"
-            android:entryValues="@array/voice_input_modes_values"
-            android:entries="@array/voice_input_modes"
-            android:defaultValue="@string/voice_mode_symbols"
-            />
-
     <PreferenceScreen
             android:title="@string/language_selection_title"
             android:summary="@string/language_selection_summary">

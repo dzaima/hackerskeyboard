@@ -65,7 +65,7 @@
             android:keyLabel="9" />
         <Key
             android:keyWidth="8.035714%p"            
-            android:keyLabel="/" />
+            android:keyLabel="÷" />
         <Key
             android:codes="@integer/key_home"
             android:keyWidth="10.7142855%p"
@@ -121,7 +121,7 @@
             android:keyLabel="6" />
         <Key
             android:keyWidth="8.035714%p"
-            android:keyLabel="*" />
+            android:keyLabel="×" />
 
         <Key
             android:codes="@integer/key_end"
