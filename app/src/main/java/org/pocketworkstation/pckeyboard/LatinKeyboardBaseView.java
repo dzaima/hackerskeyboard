@@ -595,8 +595,8 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
                 final float endingVelocityY = mSwipeTracker.getYVelocity();
                 // Calculate swipe distance threshold based on screen width & height,
                 // taking the smaller distance.
-                int travelX = getWidth() / 3;
-                int travelY = getHeight() / 3;
+                int travelX = getWidth() / 4;
+                int travelY = getHeight() / 4;
                 int travelMin = Math.min(travelX, travelY);
 //                Log.i(TAG, "onFling vX=" + velocityX + " vY=" + velocityY + " threshold=" + mSwipeThreshold
 //                        + " dX=" + deltaX + " dy=" + deltaY + " min=" + travelMin);
@@ -991,6 +991,7 @@ public class LatinKeyboardBaseView extends View implements PointerTracker.UIProx
 
             // Switch the character to uppercase if shift is pressed
             String label = key.getCaseLabel();
+            if (label!=null && (label.equals("↕") || label.equals("↙") || label.equals("↖") || label.equals("↩"))) label+= "\uFE0E";
 
             float yscale = 1.0f;
             final Rect bounds = keyBackground.getBounds();

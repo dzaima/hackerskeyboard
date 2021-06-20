@@ -27,9 +27,6 @@
   
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-  <string name="key_spce_main"> </string>
-  <string name="key_spce_shift"></string>
-  <string name="key_spce_alt">‿</string>
   
   
   <string name="key_tlde_main">`</string>
@@ -217,7 +214,7 @@
 
   <string name="key_ab08_main">,</string>
   <string name="key_ab08_shift">&lt;</string>
-  <string name="key_ab08_alt">∾≤</string>
+  <string name="key_ab08_alt">∾≤‿</string>
 
   <string name="key_ab09_main">.</string>
   <string name="key_ab09_shift">&gt;</string>

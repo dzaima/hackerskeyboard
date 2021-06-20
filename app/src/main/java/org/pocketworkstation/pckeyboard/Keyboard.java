@@ -565,7 +565,7 @@ public class Keyboard {
             StringBuilder popup = new StringBuilder(popupLen);
             for (int i = 0; i < popupLen; ++i) {
                 char c = popupCharacters.charAt(i);
-                if (isShifted || isShiftCaps) {
+                if ((isShifted || isShiftCaps) && !Character.isLowSurrogate(c) && !Character.isHighSurrogate(c)) {
                     String upper = Character.toString(c).toUpperCase(LatinIME.sKeyboardSettings.inputLocale);
                     if (upper.length() == 1) c = upper.charAt(0);
                 }
@@ -658,9 +658,10 @@ public class Keyboard {
                 altHint = "";
                 String popup = getPopupKeyboardContent(false, false, false);
                 if (popup.length() > 0) {
-                    char c = popup.charAt(0);
-                    if (wantAll || wantAscii && is7BitAscii(c)) {
-                        altHint = Character.toString(c);
+                    int c = popup.codePointAt(0);
+                    if (wantAll || c==(char)c && wantAscii && is7BitAscii((char)c)) {
+                        altHint = new String(Character.toChars(c));
+                        if (c=='↕'||c=='↩') altHint+= '\uFE0E';
                     }
                 }
             }
@@ -861,7 +862,7 @@ public class Keyboard {
      * keyboard will fit as many keys as possible in each row.
      */
     private Keyboard(Context context, int defaultHeight, int layoutTemplateResId,
-            CharSequence characters, boolean reversed, int columns, int horizontalPadding) {
+            CharSequence charactersSeq, boolean reversed, int columns, int horizontalPadding) {
         this(context, defaultHeight, layoutTemplateResId);
         int x = 0;
         int y = 0;
@@ -875,11 +876,18 @@ public class Keyboard {
         row.verticalGap = mDefaultVerticalGap;
         final int maxColumns = columns == -1 ? Integer.MAX_VALUE : columns;
         mLayoutRows = 1;
-        int start = reversed ? characters.length()-1 : 0;
-        int end = reversed ? -1 : characters.length();
+        ArrayList<String> labels = new ArrayList<>();
+        String charactersStr = charactersSeq.toString();
+        for (int i = 0; i < charactersStr.length(); ) {
+            int p = charactersStr.codePointAt(i);
+            labels.add(new String(Character.toChars(p)));
+            i+= Character.charCount(p);
+        }
+        int start = reversed ? labels.size()-1 : 0;
+        int end = reversed ? -1 : labels.size();
         int step = reversed ? -1 : 1;
         for (int i = start; i != end; i+=step) {
-            char c = characters.charAt(i);
+            String c = labels.get(i);
             if (column >= maxColumns
                     || x + mDefaultWidth + horizontalPadding > mDisplayWidth) {
                 x = 0;
@@ -891,7 +899,7 @@ public class Keyboard {
             key.x = x;
             key.realX = x;
             key.y = y;
-            key.label = String.valueOf(c);
+            key.label = c;
             key.codes = key.getFromString(key.label);
             column++;
             x += key.width + key.gap;

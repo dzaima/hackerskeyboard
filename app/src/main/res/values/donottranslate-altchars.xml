@@ -18,6 +18,29 @@
 */
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="alternates_for_backtick"></string>
+    <string name="alternates_for_dash"></string>
+    <string name="alternates_for_backslash"></string>
+    <string name="alternates_for_semicolon"></string>
+    <string name="alternates_for_equal"></string>
+    <string name="alternates_for_l_bracket"></string>
+    <string name="alternates_for_r_bracket"></string>
+    <string name="alternates_for_1">`</string>
+    <string name="alternates_for_2">~</string>
+    <string name="alternates_for_3">-</string>
+    <string name="alternates_for_4">_</string>
+    <string name="alternates_for_5">=</string>
+    <string name="alternates_for_6">+</string>
+    <string name="alternates_for_7">{</string>
+    <string name="alternates_for_8">}</string>
+    <string name="alternates_for_9">[</string>
+    <string name="alternates_for_0">]</string>
+    <string name="alternates_for_quote">|</string>
+    <string name="alternates_for_comma">;</string>
+    <string name="alternates_for_dot">:</string>
+    <string name="alternates_for_slash">\\</string>
+    
+    
     <string name="alternates_for_a">áàâãäåāæ</string>
     <string name="alternates_for_b"></string>
     <string name="alternates_for_c">çčć¢</string>
