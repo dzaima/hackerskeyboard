@@ -153,7 +153,6 @@ public class LatinIMESettings extends PreferenceActivity
             }
         }
         mVoiceOn = false;
-        updateVoiceModeSummary();
         updateSummaries();
     }
 
