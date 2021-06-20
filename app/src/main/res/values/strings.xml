@@ -21,7 +21,7 @@
     <!-- Title for Latin keyboard  -->
         <string name="english_ime_name">Array Hacker\'s Keyboard</string>
     <!-- Title for Latin keyboard settings activity / dialog -->
-    <string name="english_ime_settings">Settings for Hacker\'s Keyboard</string>
+    <string name="english_ime_settings">Settings for Array Hacker\'s Keyboard</string>
     <!-- Title for Latin keyboard input options dialog -->
     <string name="english_ime_input_options">Input options</string>
 
@@ -637,6 +637,10 @@
     <string name="main_setup_test">Test</string>
     <string name="main_body"><Data>
       <![CDATA["
+        <h2>Array Hacker's Keyboard</h2>
+        
+        See <a href='https://github.com/dzaima/hackerskeyboard/blob/master/README.md'>the README</a> for information about this fork. The original unmodified text follows.
+        
         <h2>Enabling Hacker's Keyboard</h2>
         
         <p><i>Hacker's Keyboard</i> provides a new Android input method. It is <b>disabled by default</b>, and for security reasons Android doesn't allow programs to change input method settings. Please follow the following steps to activate it.<p>
