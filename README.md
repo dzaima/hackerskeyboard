@@ -19,3 +19,5 @@ Suggested options:
 - "Ctrl-A (select all) override": "Use Ctrl-A (no override)" to enable ctrl+a
 - "Long-press duration": set this to the lowest number you're comfortable with (I've set it to 160ms)
 - "Suggested punctuation" → `{}[]()` (as those are harder to type in compact portrait otherwise)
+
+Build APK: `./gradlew assembleRelease` with java 11 (8 maybe works, haven't tested); output is at `app/build/outputs/apk/release/app-release.apk`
